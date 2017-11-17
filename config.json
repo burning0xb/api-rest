@@ -1,0 +1,14 @@
+{
+  "port": 8888,
+  "rabbitMq_host": "***",
+  "rabbitMq_port": "****",
+  "rabbitMq_user": "***",
+  "rabbitMq_password": "***",
+  "MQ_QUEUE_COMMON": "server",
+  "MQ_QUEUE_COMMON_TEST": "server_test",
+  "MQ_QUEUE_LOG": "log",
+  "MQ_QUEUE_PAY": "pay",
+  "MQ_QUEUE_PAY_TEST": "pay_test",
+  "maxAge": 1800000,
+  "redis_maxAge": 1800
+}

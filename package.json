@@ -1,0 +1,73 @@
+{
+  "name": "api-store",
+  "version": "1.0.0",
+  "description": "the api of store project",
+  "main": "server.js",
+  "scripts": {
+    "start": "better-npm-run start-online",
+    "dev": "better-npm-run start-dev"
+  },
+  "betterScripts": {
+    "start-dev": {
+      "command": "supervisor ./endpoint.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start-online": {
+      "command": "node ./endpoint.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://106.14.77.183/repo/WechatSore/api-store"
+  },
+  "keywords": [
+    "koa2",
+    "wechat"
+  ],
+  "author": "wangrui",
+  "license": "ISC",
+  "dependencies": {
+    "ali-oss": "^4.8.0",
+    "amqplib": "^0.5.1",
+    "autobind-decorator": "^1.4.3",
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "better-npm-run": "0.0.15",
+    "co": "^4.6.0",
+    "cross-env": "^5.0.1",
+    "crypto": "0.0.3",
+    "form-data": "^2.1.4",
+    "ioredis": "^2.5.0",
+    "kafka-node": "^1.6.2",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "0.0.16",
+    "koa-logger": "^2.0.1",
+    "koa-multer": "^1.0.1",
+    "koa-router": "^7.1.1",
+    "koa-session2": "^1.0.9",
+    "koa2": "^2.0.0-alpha.7",
+    "log4js": "^1.1.1",
+    "moment": "^2.18.1",
+    "node-aliyun-sms": "^1.0.1",
+    "node-fetch": "^1.6.3",
+    "node-schedule": "^1.2.4",
+    "node-uuid": "^1.4.8",
+    "urlencode": "^1.1.0",
+    "uuid": "^3.1.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4"
+  }
+}
