@@ -9,7 +9,7 @@ export default class RedisStore extends Store {
           port: "***",          // Redis port
           host: '**',   // Redis host
           family: 4,           // 4 (IPv4) or 6 (IPv6)
-          password: 'wangrui1994'
+          password: '***'
         });
     }
 
