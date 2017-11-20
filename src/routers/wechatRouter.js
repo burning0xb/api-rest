@@ -8,7 +8,7 @@ function wechatRouter(router) {
   const eventHandler = new EventHandler(global.MQ);
   const parseMessage = new ParseMessage();
 
-  router.get('/', (ctx, next) => {
+  router.get('/security', (ctx, next) => {
     const echostr = ctx.query.echostr;
     if (wechatAuth(ctx)) {
       console.log('wechat join success!');
