@@ -1,6 +1,5 @@
-import config from '../config.json';
+import { token } from '../security.json';
 import crypto from 'crypto';
-const token = config.token;
 function wechatAuth(ctx) {
   const signature = ctx.query.signature;
   const timestamp = ctx.query.timestamp;

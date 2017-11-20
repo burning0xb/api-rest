@@ -1,5 +1,5 @@
 {
-  "name": "api-store",
+  "name": "api-rest",
   "version": "1.0.0",
   "description": "the api of store project",
   "main": "server.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://106.14.77.183/repo/WechatSore/api-store"
+    "url": "https://github.com/burning0xb/api-rest.git"
   },
   "keywords": [
     "koa2",

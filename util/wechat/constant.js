@@ -1,0 +1,13 @@
+export const SUBSCRIBE = 'subscribe';
+export const UNSUBSCRIBE = 'unsubscribe';
+export const SCAN = 'SCAN';
+export const LOCATION = 'LOCATION';
+export const CLICK = 'CLICK';
+export const VIEW = 'VIEW';
+export const TEXT = 'text';
+export const IMAGE = 'image';
+export const VOICE = 'voice';
+export const VIDEO = 'video';
+export const SHORTVIDEO = 'shortvideo';
+export const MSG_LOCATION = 'location';
+export const LINK = 'link';

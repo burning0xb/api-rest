@@ -1,5 +1,4 @@
 import amqp from 'amqplib/callback_api';
-import { basename } from 'path';
 import RabbitSend from './RabbitSend';
 import config from '../config.json';
 
