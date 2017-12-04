@@ -1,14 +1,12 @@
 {
   "port": 8888,
-  "rabbitMq_host": "主机IP",
-  "rabbitMq_port": "端口",
-  "rabbitMq_user": "用户名",
-  "rabbitMq_password": "密码",
-  "MQ_QUEUE_COMMON": "js_server",
-  "MQ_QUEUE_COMMON_TEST": "server_test",
-  "MQ_QUEUE_LOG": "log",
-  "MQ_QUEUE_PAY": "pay",
-  "MQ_QUEUE_PAY_TEST": "pay_test",
+  "rabbitMq_host": "192.168.41.144",
+  "rabbitMq_port": "5672",
+  "rabbitMq_user": "admin",
+  "rabbitMq_password": "wangrui1994",
+  "MQ_QUEUE_COMMON": "jslight-service-common",
+  "MQ_QUEUE_ORDER": "jslight-service-order",
+  "MQ_QUEUE_COMMON_TEST": "jslight-service-common-test",
   "maxAge": 1800000,
   "redis_maxAge": 1800
 }

@@ -34,8 +34,8 @@ export default class RabbitSend {
     let queue = config.MQ_QUEUE_COMMON;
     // let queue = config.MQ_QUEUE_COMMON_TEST;
     switch (type) {
-      case 'log':
-        queue = config.MQ_QUEUE_LOG;
+      case 'order':
+        queue = config.MQ_QUEUE_ORDER;
         break;
       case 'pay':
         queue = config.MQ_QUEUE_PAY;
@@ -52,9 +52,12 @@ export default class RabbitSend {
         resolve: resolve,
         reject: reject
       };
-      this.ch.consume(this.ok.queue, (msg) => {
-        this.mabeAnswer(msg);
-      }, { noAck: true });
+      if (!global.readyListener.includes(queue)) {
+        global.readyListener.push(queue);
+        this.ch.consume(this.ok.queue, (msg) => {
+          this.mabeAnswer(msg);
+        }, { noAck: true });
+      }
       this.ch.sendToQueue(queue, new Buffer(JSON.stringify(content)), {
         replyTo: this.ok.queue,
         correlationId: correlationId

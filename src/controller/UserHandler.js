@@ -22,40 +22,19 @@ export default class UserHandler extends BaseHandler {
         content: {}
       };
       const server = this.initServer(this.server);
-      const res = await server.send(content);
-      return res;
-    }
+      const res1 = await server.send(content);
+      // return res1;
 
-    /**
-     * [saveWechatUser 保存微信用户]
-     * @method saveWechatUser
-     * @param  {[type]}       body [description]
-     * @return {Promise}           [description]
-     */
-    async saveWechatUser(body) {
-      const content = {
-        class: 'user',
-        func: 'saveWechatUser',
-        content: body
-      };
-      const server = this.initServer(this.server);
-      const res = await server.send(content);
-    }
 
-    /**
-     * [unsubscribe 取消关注]
-     * @method unsubscribe
-     * @param  {[type]}    body [description]
-     * @return {Promise}        [description]
-     */
-    async unsubscribe(body) {
-      const content = {
-        class: 'user',
-        func: 'unsubscribe',
-        content: body
+      const content2 = {
+        class: 'common',
+        func: 'getOrderList',
+        content: {}
       };
-      const server = this.initServer(this.server);
-      const res = await server.send(content);
+      const server2 = this.initServer(this.server);
+      const res2 = await server2.send(content2, 'order');
+
+      return { res1, res2 };
     }
 
 }

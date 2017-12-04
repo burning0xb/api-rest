@@ -1,15 +1,13 @@
 import Redis from 'ioredis';
 import { Store } from 'koa-session2';
 import config from '../../config.json';
+import { port, host, password } from '../../config/redis.json';
 
 export default class RedisStore extends Store {
     constructor() {
         super();
         this.redis = new Redis({
-          port: '端口号',          // Redis port
-          host: '主机ip',   // Redis host
-          family: 4,           // 4 (IPv4) or 6 (IPv6)
-          password: '密码'
+          port, host, family: 4, password
         });
     }
 
