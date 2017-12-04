@@ -11,10 +11,10 @@ const util = new Common();
 let path = '';
 if (process.env.NODE_ENV === 'development') {
   // 自己修改dev路径
-  path = '/Users/burning/uploads/jslight';
+  path = '/Users/burning/uploads/api-rest';
 } else {
   // 服务器路径
-  path = '/root/uploads/jslight';
+  path = '/root/uploads/api-rest';
 }
 
 const storage = multer.diskStorage({
@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const router = koaRouter({
-  prefix: '/jslight/api'
+  prefix: '/api-rest/api'
 });
 
 router.get('/', (ctx, next) => {
